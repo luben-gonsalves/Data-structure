@@ -1,4 +1,4 @@
-Array.prototype.CustomMap = function (callBack) {
+Array.prototype.customMap = function (callBack) {
   let result = [];
 
   this.forEach((value, index, array) => {
@@ -10,7 +10,7 @@ Array.prototype.CustomMap = function (callBack) {
 
 let array = [1, 2, 3, 4, 5];
 
-let sqauredArray = array.CustomMap(function (val) {
+let sqauredArray = array.customMap(function (val) {
   return val * 2;
 });
 

@@ -1,4 +1,4 @@
-Array.prototype.CustomReduce = function (callBack, initialValue) {
+Array.prototype.customReduce = function (callBack, initialValue) {
   let accumulator = initialValue;
   this.forEach((value, index) => {
     if (accumulator === undefined && initialValue === 0) {
@@ -13,7 +13,7 @@ Array.prototype.CustomReduce = function (callBack, initialValue) {
 
 let array = [1, 2, 3, 4, 5];
 
-let sum = array.CustomReduce(function (prevVal, currentVal) {
+let sum = array.customReduce(function (prevVal, currentVal) {
   return prevVal + currentVal;
 }, 0);
 
