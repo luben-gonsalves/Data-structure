@@ -11,5 +11,6 @@ function lowestCommonAncestor(root, p, q) {
   else if (root.val < p.val && root.val < q.val) {
     return lowestCommonAncestor(root.right, p, q);
   }
+
   return root;
 }
