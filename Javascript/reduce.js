@@ -1,6 +1,6 @@
 Array.prototype.CustomReduce = function (callBack, initialValue) {
   let accumulator = initialValue;
-  [...this].forEach((value, index) => {
+  this.forEach((value, index) => {
     if (accumulator === undefined && initialValue === 0) {
       accumulator = value;
     } else {

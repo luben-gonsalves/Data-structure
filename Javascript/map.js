@@ -1,8 +1,9 @@
 Array.prototype.CustomMap = function (callBack) {
   let result = [];
-  for (let i = 0; i < this.length; i++) {
-    result.push(callBack(this[i]));
-  }
+
+  this.forEach((value, index, array) => {
+    result.push(callBack(value, index, array));
+  });
 
   return result;
 };
