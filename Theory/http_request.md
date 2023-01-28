@@ -1,0 +1,1 @@
+A preflight request with option is sent to server, The purpose of the preflight request is to determine whether or not the original request is safe. If its safe then it allows the original request back to the server
