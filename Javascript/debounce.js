@@ -1,15 +1,16 @@
 let counter = 0;
-function getSearchResults(a, b) {
+function getSearchResults() {
   console.log("searching..", counter++);
 }
 
 function debounce(fn, limiter) {
-  let timer;
-  return function () {
+  let timer = null;
+  return function (...args) {
+    const context = this;
     clearTimeout(timer);
-    timer = setTimeout(() => {
-      fn.apply(this, arguments);
-    }, limiter);
+    timer = setTimeout(function () {
+      func.apply(context, args);
+    }, wait);
   };
 }
 
