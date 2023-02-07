@@ -9,9 +9,9 @@ function throttle(fn, limit) {
     shouldThrottle = true;
     setTimeout(function () {
       shouldThrottle = false;
-    }, wait);
+    }, limit);
 
-    func.apply(this, args);
+    fn.apply(this, args);
   };
 }
 
