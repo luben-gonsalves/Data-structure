@@ -15,3 +15,13 @@ let filteredArray = array.customFilter(function (val) {
 });
 
 console.log(filteredArray);
+
+Array.prototype.customFilter = function (callback) {
+  let result = [];
+
+  this.forEach(function (value, index) {
+    result.push(callback(value));
+  });
+
+  return result;
+};
